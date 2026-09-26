@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Birds With Apps is an independent software studio creating simple, useful apps and digital tools.">
+  <meta name="color-scheme" content="light dark">
+  <title>Birds With Apps</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Birds With Apps home">
+        <picture>
+          <source srcset="assets/logo-dark.svg" media="(prefers-color-scheme: dark)" id="logo-source">
+          <img src="assets/logo-light.svg" width="1672" height="941" alt="Birds With Apps logo">
+        </picture>
+      </a>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Dark mode</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Independent software studio</p>
+        <h1 id="page-title">BIRDS WITH APPS</h1>
+        <p class="tagline">an independent software studio creating simple, useful apps and digital tools</p>
+      </section>
+
+      <section class="apps" aria-labelledby="apps-title">
+        <div class="section-heading"><h2 id="apps-title">OUR APPS</h2><span aria-hidden="true" class="heading-rule"></span></div>
+        <div class="app-grid">
+          <!-- To add an app, copy an article and change its icon, name, description and link. -->
+          <article class="app-card">
+            <img class="app-icon" src="assets/concertroll.png" width="1024" height="1024" alt="ConcertRoll app icon">
+            <div class="app-copy"><h3>ConcertRoll</h3>
+              <p>Organize your concert, festival and venue photos and keep your live music memories together.</p>
+              <span class="app-status">Coming soon</span>
+            </div>
+          </article>
+          <article class="app-card">
+            <img class="app-icon" src="assets/insulinhusker.png" width="1024" height="1024" alt="InsulinHusker app icon" loading="lazy">
+            <div class="app-copy"><h3>InsulinHusker</h3>
+              <p>A simple way to keep track of whether you have taken your insulin.</p>
+              <span class="app-status">Download link to follow</span>
+            </div>
+          </article>
+          <article class="app-card">
+            <img class="app-icon" src="assets/roomsweep.png" width="1024" height="1024" alt="RoomSweep app icon" loading="lazy">
+            <div class="app-copy"><h3>RoomSweep</h3>
+              <p>Never leave chargers, toiletries or essentials behind again.</p>
+              <span class="app-status">Download link to follow</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><strong>Birds With Apps</strong><span>© 2026 Birds With Apps</span></div>
+      <p>Contact: <a href="mailto:birdswithapps@gmail.com">birdswithapps@gmail.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>
