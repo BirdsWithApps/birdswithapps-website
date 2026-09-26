@@ -1,5 +1,4 @@
 const toggle = document.querySelector('.theme-toggle');
-const logoSource = document.querySelector('#logo-source');
 
 function isDark() {
   return document.documentElement.dataset.theme === 'dark' ||
@@ -11,8 +10,6 @@ function updateThemeButton() {
   toggle.setAttribute('aria-pressed', String(dark));
   toggle.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} mode`);
   toggle.querySelector('.theme-label').textContent = dark ? 'Light mode' : 'Dark mode';
-  // Explicit selection overrides the system appearance used by <picture>.
-  logoSource.media = document.documentElement.dataset.theme ? (dark ? 'all' : 'not all') : '(prefers-color-scheme: dark)';
 }
 
 toggle.addEventListener('click', () => {
