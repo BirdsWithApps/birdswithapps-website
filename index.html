@@ -7,8 +7,8 @@
   <meta name="color-scheme" content="light dark">
   <title>Birds With Apps</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="style.css?v=4">
-  <script src="script.js?v=2" defer></script>
+  <link rel="stylesheet" href="style.css?v=5">
+  <script src="script.js?v=5" defer></script>
 </head>
 <body>
   <div class="page">
@@ -31,22 +31,22 @@
       <section class="apps" aria-labelledby="apps-title">
         <div class="section-heading"><h2 id="apps-title">OUR APPS</h2><span aria-hidden="true" class="heading-rule"></span></div>
         <div class="app-grid">
-          <!-- To add an app, copy an article and change its icon, name, description and link. -->
-          <article class="app-card">
+          <!-- To add an app, copy a card and change its icon, name, description, link and data-category. Only data-featured cards appear in this first grid. -->
+          <article class="app-card" data-category="Music" data-featured>
             <img class="app-icon" src="assets/concertroll.png" width="1024" height="1024" alt="ConcertRoll app icon">
             <div class="app-copy"><h3>ConcertRoll</h3>
               <p>Organize your concert, festival and venue photos and keep your live music memories together.</p>
               <span class="app-status">Coming soon</span>
             </div>
           </article>
-          <a class="app-card app-link" href="https://apps.apple.com/dk/app/insulinhusker/id6806816373">
+          <a class="app-card app-link" data-category="Health" data-featured href="https://apps.apple.com/dk/app/insulinhusker/id6806816373">
             <img class="app-icon" src="assets/insulinhusker.png" width="1024" height="1024" alt="InsulinHusker app icon" loading="lazy">
             <div class="app-copy"><h3>InsulinHusker</h3>
               <p>A simple way to keep track of whether you have taken your insulin.</p>
               <span class="app-status">View on the App Store</span>
             </div>
           </a>
-          <a class="app-card app-link" href="https://apps.apple.com/dk/app/roomsweep/id6794705480">
+          <a class="app-card app-link" data-category="Travel" data-featured href="https://apps.apple.com/dk/app/roomsweep/id6794705480">
             <img class="app-icon" src="assets/roomsweep.png" width="1024" height="1024" alt="RoomSweep app icon" loading="lazy">
             <div class="app-copy"><h3>RoomSweep</h3>
               <p>Never leave chargers, toiletries or essentials behind again.</p>
@@ -54,6 +54,13 @@
             </div>
           </a>
         </div>
+      </section>
+
+      <section class="categories" aria-labelledby="categories-title">
+        <div class="section-heading"><h2 id="categories-title">CATEGORIES</h2><span aria-hidden="true" class="heading-rule"></span></div>
+        <div class="category-filters" role="group" aria-label="Filter apps by category"></div>
+        <p class="category-count" aria-live="polite"></p>
+        <ul class="category-results"></ul>
       </section>
     </main>
 
