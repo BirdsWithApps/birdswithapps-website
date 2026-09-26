@@ -26,6 +26,7 @@ const apps = [...document.querySelectorAll('.app-grid > .app-card')].map(card =>
   name: card.querySelector('h3').textContent,
   description: card.querySelector('p').textContent,
   platforms: card.querySelector('.app-platforms').textContent,
+  languages: card.querySelector('.app-languages').textContent,
   icon: card.querySelector('img').getAttribute('src'),
   url: card.getAttribute('href'),
   status: card.querySelector('.app-status').textContent
@@ -58,10 +59,13 @@ function showCategory(category) {
     const platforms = document.createElement('span');
     platforms.className = 'category-platforms';
     platforms.textContent = app.platforms;
+    const languages = document.createElement('span');
+    languages.className = 'category-languages';
+    languages.textContent = app.languages;
     const action = document.createElement('span');
     action.className = 'category-action';
     action.textContent = app.status;
-    details.append(name, description, platforms, action);
+    details.append(name, description, platforms, languages, action);
     content.append(icon, details);
     item.append(content);
     return item;
