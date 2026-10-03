@@ -1,0 +1,24 @@
+name: HitRun OHLCV validation
+on:
+  push:
+    branches: [hitrun-research]
+    paths:
+      - 'hitrun/**'
+      - '.github/workflows/hitrun-ohlcv.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install --disable-pip-version-check pandas pyarrow huggingface_hub
+      - run: python hitrun/inspect_prices.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hitrun-ohlcv-validation
+          path: out/
+          retention-days: 1
