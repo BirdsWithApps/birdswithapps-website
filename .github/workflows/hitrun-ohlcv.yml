@@ -2,9 +2,9 @@ name: HitRun OHLCV validation
 on:
   push:
     branches: [hitrun-research]
-    paths:
-      - 'hitrun/**'
-      - '.github/workflows/hitrun-ohlcv.yml'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 jobs:
   validate:
     runs-on: ubuntu-latest
